@@ -75,7 +75,7 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
   >
     Native mobile wallet experiences.
   </Card>
-  <Card title="Javascript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
+  <Card title="JavaScript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
     Framework-agnostic implementation.
   </Card>
   <Card

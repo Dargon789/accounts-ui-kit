@@ -75,7 +75,7 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
   >
     Native mobile wallet experiences.
   </Card>
-  <Card title="JavaScript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
+  <Card title="Javascript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
     Framework-agnostic implementation.
   </Card>
   <Card
@@ -405,8 +405,8 @@ Launching a rollup can unlock new revenue streams, enable novel use cases, and p
 
 <Info>
 
-  [![Chains](https://alchemyapi-res.cloudinary.com/image/upload/v1764179964/docs/api-reference/alchemy-transact/transaction-simulation/523fb8a9a9d899921ee1046d0ff1b389967a9976d1c6112ebbbe071ddd1ef374-image.png)](https://dashboard.alchemy.com/chains)
-
+  ![[Chains](https://dashboard.alchemy.com/chains)](https://alchemyapi-res.cloudinary.com/image/upload/v1764179964/docs/api-reference/alchemy-transact/transaction-simulation/523fb8a9a9d899921ee1046d0ff1b389967a9976d1c6112ebbbe071ddd1ef374-image.png)
+  
 </Info>
 
 ## 📍 Network & Demo Contract

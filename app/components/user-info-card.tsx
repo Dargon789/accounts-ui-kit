@@ -1,4 +1,5 @@
-import { Info, ExternalLink, Copy } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,15 +19,24 @@ import { formatAddress } from "@/lib/utils";
 import { useUser, useSmartAccountClient } from "@account-kit/react";
 
 export default function UserInfo() {
+  const [isCopied, setIsCopied] = useState(false);
   const user = useUser();
   const userEmail = user?.email ?? "anon";
   const { client } = useSmartAccountClient({});
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(client?.account?.address ?? "");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>User Profile</CardTitle>
-        <CardDescription>Your account information</CardDescription>
+        <CardDescription>
+          Your users are always in control of their non-custodial smart wallet.
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
@@ -40,40 +50,37 @@ export default function UserInfo() {
             <p className="text-sm font-medium text-muted-foreground">
               Smart wallet address
             </p>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Info className="h-4 w-4 text-muted-foreground" />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Your smart wallet address</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
           </div>
           <div className="flex items-center gap-2">
             <Badge variant="outline" className="font-mono text-xs py-1 px-2">
               {formatAddress(client?.account?.address ?? "")}
             </Badge>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-6 w-6"
-              onClick={() => {
-                navigator.clipboard.writeText(client?.account?.address ?? "");
-              }}
-            >
-              <Copy className="h-4 w-4" />
-            </Button>
+            <TooltipProvider>
+              <Tooltip open={isCopied}>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-6 w-6"
+                    onClick={handleCopy}
+                  >
+                    <Copy className="h-4 w-4" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Copied!</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
             <Button
               variant="ghost"
               size="icon"
               className="h-6 w-6"
               onClick={() => {
                 const address = client?.account?.address;
-                if (address) {
+                if (address && client?.chain?.blockExplorers?.default?.url) {
                   window.open(
-                    `https://sepolia.basescan.org/address/${address}`,
+                    `${client.chain.blockExplorers.default.url}/address/${address}`,
                     "_blank"
                   );
                 }

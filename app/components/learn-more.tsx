@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function LearnMore() {
   const resources = [
     {
-      title: "Account Kit Documentation",
+      title: "Smart Wallets Documentation",
       description: "Complete guide to building with smart wallets",
       url: "https://accountkit.alchemy.com/",
       icon: Book,
@@ -22,10 +22,9 @@ export default function LearnMore() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Learn More</CardTitle>
+        <CardTitle>Get Started</CardTitle>
         <CardDescription>
-          Explore resources to master smart wallet development and account
-          abstraction
+          Build seamless onboarding and transacting flows with smart wallets
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

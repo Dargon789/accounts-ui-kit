@@ -36,8 +36,8 @@ export default function LoginPage() {
         <CardDescription
           className={cn("text-base text-gray-600 dark:text-gray-400")}
         >
-          Welcome! Sign in to access your smart wallet dashboard and manage your
-          digital assets securely.
+          Experience seamless onchain UX with smart wallets. Click log in to
+          continue.
         </CardDescription>
       </CardHeader>
 
@@ -57,7 +57,7 @@ export default function LoginPage() {
           {isLoggingIn ? (
             <>
               <Loader2 className={cn("animate-spin -ml-1 mr-3 h-5 w-5")} />
-              Login
+              Log in
             </>
           ) : (
             <>Login</>

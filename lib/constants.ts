@@ -1,7 +1,7 @@
 import { parseAbi } from "viem";
+import { arbitrumSepolia } from "@account-kit/infra";
 
-export const NFT_CONTRACT_ADDRESS =
-  "0x53f92cFadF935F376fDe59a0f67958400a899a12";
+export const DEFAULT_CHAIN_ID = arbitrumSepolia.id;
 
 export const NFT_MINTABLE_ABI_PARSED = parseAbi([
   "function mintTo(address recipient) returns (uint256)",

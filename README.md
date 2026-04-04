@@ -7,45 +7,41 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
 - Email, passkey & social login using pre‑built UI components
 - Flexible, secure, and cheap smart accounts
 - Gasless transactions powered by ERC-4337 Account Abstraction
-- One‑click NFT mint on Base Sepolia (no ETH required)
+- One‑click NFT mint (no ETH required)
 - Server‑side rendering ready – session persisted with cookies
 - TailwindCSS + shadcn/ui components, React Query, TypeScript
 
+![Smart Wallet Quickstart](https://github.com/user-attachments/assets/2903fb78-e632-4aaa-befd-5775c60e1ca2)
+
+## 📍 Network & Demo Contract
+
+This quickstart is configured to run on **Arbitrum Sepolia** testnet, by default. A free demo NFT contract has been deployed specifically for this quickstart, allowing you to mint NFTs without any setup or deployment steps. The contract is pre-configured and ready to use out of the box.
+
 ## 🚀 Quick start
 
-Choose the setup that fits your workflow.
-
-### Option A (recommended)– scaffold a new app
+### Scaffold a new app
 
 ```bash
-yarn create next-app account-kit-quickstart \
-  -e https://github.com/alchemyplatform/account-kit-quickstart
-cd account-kit-quickstart
-```
-
-### Option B – clone the template repo
-
-```bash
-git clone https://github.com/alchemyplatform/account-kit-quickstart.git
-cd account-kit-quickstart
+npm create next-app smart-wallets-quickstart -- --example https://github.com/alchemyplatform/smart-wallets-quickstart
+cd smart-wallets-quickstart
 ```
 
 ### 🔧 Configure
 
-Get your pre-configured API key and policy ID from the [Smart Wallets dashboard](https://dashboard.alchemypreview.com/services/smart-wallets/configuration) by viewing one of your configurations. You will get a default app, configuration, and sponsorship policy created for you to quickly start testing.
+Get your pre-configured API key and policy ID from the [Smart Wallets dashboard](https://dashboard.alchemy.com/services/smart-wallets/configuration) by viewing one of your configurations. You will get a default app, configuration, and sponsorship policy created for you to quickly start testing.
 
 Once you have your keys, add them to your `.env.local ` file.
 
 ```bash
 cp .env.example .env.local      # create if missing
 # add NEXT_PUBLIC_ALCHEMY_API_KEY=...
-# add NEXT_PUBLIC_POLICY_ID=...
+# add NEXT_PUBLIC_ALCHEMY_POLICY_ID=...
 ```
 
-| Variable                      | Purpose                                                                                                     |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_ALCHEMY_API_KEY` | API key for your Alchemy [app](https://dashboard.alchemy.com/services/smart-wallets/configuration)          |
-| `NEXT_PUBLIC_POLICY_ID`       | Gas Manager policy ID for [sponsorship](https://dashboard.alchemy.com/services/smart-wallets/configuration) |
+| Variable                        | Purpose                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_ALCHEMY_API_KEY`   | API key for your Alchemy [app](https://dashboard.alchemy.com/services/smart-wallets/configuration)          |
+| `NEXT_PUBLIC_ALCHEMY_POLICY_ID` | Gas Manager policy ID for [sponsorship](https://dashboard.alchemy.com/services/smart-wallets/configuration) |
 
 If instead you want to set up your own configurations from scratch you should:
 
@@ -58,7 +54,7 @@ Note: for production, you should [protect](https://www.alchemy.com/docs/wallets/
 ### Run your app!
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000), first **Login**, then try minting a new NFT.
@@ -73,13 +69,13 @@ See what else you can do with [smart wallets](https://www.alchemy.com/docs/walle
 app/           # Next.js pages & components
 components/ui/ # shadcn/ui primitives
 lib/           # constants & helpers
-config.ts      # Account Kit + Paymaster setup
+config.ts      # Account Kit + Gas Sponsorship setup
 tailwind.config.ts
 ```
 
 ## 🏗️ How it works
 
-1. `config.ts` initializes Account Kit with your API key, Base Sepolia chain, and Paymaster policy.
+1. `config.ts` initializes Account Kit with your API key, chain, and Gas Sponsorship policy.
 2. `Providers` wraps the app with `AlchemyAccountProvider` & React Query.
 3. `LoginCard` opens the authentication modal (`useAuthModal`).
 4. After login, `useSmartAccountClient` exposes the smart wallet.
@@ -88,16 +84,15 @@ tailwind.config.ts
 ## 📚 Docs & resources
 
 - React Quickstart → [https://www.alchemy.com/docs/wallets/react/quickstart](https://www.alchemy.com/docs/wallets/react/quickstart)
-- Embedded accounts overview → [https://www.alchemy.com/docs/wallets/react/overview](https://www.alchemy.com/docs/wallets/react/overview)
 - Gas Manager quickstart → [https://www.alchemy.com/docs/wallets/infra/quickstart](https://www.alchemy.com/docs/wallets/infra/quickstart)
 
 ## 🖥 Scripts
 
 ```bash
-yarn dev     # start development server
-yarn build   # production build
-yarn start   # run production build
-yarn lint    # lint code
+npm run dev     # start development server
+npm run build   # production build
+npm run start   # run production build
+npm run lint    # lint code
 ```
 
 ## 🛂 License

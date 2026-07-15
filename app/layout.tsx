@@ -3,6 +3,7 @@ import { cookieToInitialState } from "@account-kit/core";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers initialState={initialState}>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );

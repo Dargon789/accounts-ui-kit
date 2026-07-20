@@ -75,7 +75,7 @@ Use this template to get started with **embedded smart wallets** using [Alchemy 
   >
     Native mobile wallet experiences.
   </Card>
-  <Card title="JavaScript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
+  <Card title="Javascript" icon="fa-brands fa-js" href="/docs/wallets/core/overview">
     Framework-agnostic implementation.
   </Card>
   <Card
@@ -265,16 +265,6 @@ Launching a rollup can unlock new revenue streams, enable novel use cases, and p
 
 # View the Stack rollup framework.
  
-# Smart Wallets
-
-> Build zero-friction user onboarding and transactions end-to-end with one SDK.
-
-<img
-  src="https://alchemyapi-res.cloudinary.com/image/upload/v1764187314/docs/aa-sdk/images/overviewHeader.png"
-  alt="smart wallets overview"
-  className="hero-image-desktop"
-/>
-
 <Card title="Quickstart" icon="bolt" href="/docs/wallets/reference/smart-wallet-quickstart">
   Send your first transaction using the SDK or API.
 </Card>
@@ -342,61 +332,6 @@ Launching a rollup can unlock new revenue streams, enable novel use cases, and p
   </Card>
 </CardGroup>
 
-## Common Starting Places
-
-<CardGroup cols={2}>
-  <Card title="Build a new app" icon="wrench" href="/docs/wallets/react/quickstart">
-    Build an onchain app from scratch with wallets and transactions.
-  </Card>
-  <Card
-    title="Upgrade existing wallets"
-    icon="fa-solid fa-chevrons-up"
-    href="/docs/wallets/recipes/upgrade-to-smart-accounts"
-  >
-    Upgrade to smart wallets using EIP-7702 or direct wagmi integration.
-  </Card>
-  <Card
-    title="Bring your app onchain"
-    icon="fa-regular fa-globe-pointer"
-    href="/docs/wallets/authentication/login-methods/bring-your-own-auth"
-  >
-    Add wallet and transaction functionality to existing web2 applications.
-  </Card>
-  <Card
-    title="Manage wallets in backend"
-    icon="fa-solid fa-server"
-    href="/docs/reference/smart-wallet-quickstart"
-  >
-    Server-side applications with signing and sending on your backend.
-  </Card>
-</CardGroup>
-
-## Resources
-
-<CardGroup cols={3}>
-  <Card
-    title="Support"
-    icon="fa-solid fa-question"
-    href="/docs/wallets/resources/faqs"
-  >
-    Troubleshoot issues or get in touch.
-  </Card>
-  <Card
-    title="Recipes"
-    icon="fa-solid fa-book"
-    href="/docs/wallets/recipes/overview"
-  >
-    End-to-end guides for common features.
-  </Card>
-  <Card
-    title="Pricing"
-    icon="fa-solid fa-dollar-sign"
-    href="https://wallet-calculator.alchemy.com/"
-  >
-    Save costs as you scale.
-  </Card>
-</CardGroup>
-
 ![Smart Wallet Quickstart](https://github.com/user-attachments/assets/2903fb78-e632-4aaa-befd-5775c60e1ca2)
 
 # Feature Support By Chain
@@ -405,8 +340,8 @@ Launching a rollup can unlock new revenue streams, enable novel use cases, and p
 
 <Info>
 
-  [![Chains](https://alchemyapi-res.cloudinary.com/image/upload/v1764179964/docs/api-reference/alchemy-transact/transaction-simulation/523fb8a9a9d899921ee1046d0ff1b389967a9976d1c6112ebbbe071ddd1ef374-image.png)](https://dashboard.alchemy.com/chains)
-
+  ![[Chains](https://dashboard.alchemy.com/chains)](https://alchemyapi-res.cloudinary.com/image/upload/v1764179964/docs/api-reference/alchemy-transact/transaction-simulation/523fb8a9a9d899921ee1046d0ff1b389967a9976d1c6112ebbbe071ddd1ef374-image.png)
+  
 </Info>
 
 ## 📍 Network & Demo Contract
